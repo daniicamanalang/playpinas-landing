@@ -1,23 +1,27 @@
 import React from 'react';
+import Logo from '../assets/logo';
+import Button from './Base/Button';
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-4">
-      <div className="w-8 h-8 bg-gray-200 rounded-full"></div>
-      <nav className="hidden md:flex space-x-4">
-        <a href="#" className="text-gray-600">
-          Games
-        </a>
-        <a href="#" className="text-gray-600">
-          About us
-        </a>
-        <a href="#" className="text-gray-600">
-          Contact
-        </a>
-      </nav>
-      <div className="flex space-x-2">
-        <button className="px-4 py-2 bg-gray-200 rounded">Play Now</button>
-        <button className="px-4 py-2 bg-black text-white rounded">Login</button>
+    <header className="flex justify-between items-center p-4 w-full">
+      <Logo />
+      <div className="flex items-center gap-6">
+        <nav className="hidden md:flex space-x-4">
+          <a href="#" className="text-gray-600">
+            Games
+          </a>
+          <a href="#" className="text-gray-600">
+            About us
+          </a>
+          <a href="#" className="text-gray-600">
+            Contact
+          </a>
+        </nav>
+        <div className="flex space-x-2">
+          <Button>Play now</Button>
+          <Button className="!bg-black !text-white !border-0">Join us</Button>
+        </div>
       </div>
     </header>
   );

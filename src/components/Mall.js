@@ -1,15 +1,21 @@
 import React from 'react';
+import MallPlaceholder from '../assets/MallPlaceholder.png';
+import Button from './Base/Button';
 
 const Mall = () => {
   return (
-    <section className="p-8">
-      <h2 className="text-2xl font-bold mb-4">Mall</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <section className="p-5">
+      <h2 className="text-2xl font-bold mb-4 w-full text-center p-8">Mall</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {[...Array(12)].map((_, i) => (
-          <div key={i} className="bg-gray-200 h-32"></div>
+          <div key={i} className="p-4 border border-slate-100 rounded-md flex items-center justify-center">
+            <img src={MallPlaceholder} alt="section" />
+          </div>
         ))}
       </div>
-      <button className="mt-4 px-4 py-2 bg-gray-200 rounded">Load more</button>
+      <div className='w-full flex justify-end pt-5'>
+        <Button>Load more</Button>
+      </div>
     </section>
   );
 };
